@@ -29,7 +29,7 @@ send_chat = "@MetodosMS40ez"
 ccs_ac = []
 
 
-@client.on(events.NewMessage())
+@client.on(events.NewMessage(chats=chats))
 async def scrapper(e: events.NewMessage.Event):
     text = e.message.message
     ccs = get_cc(text)
@@ -74,7 +74,7 @@ async def scrapper(e: events.NewMessage.Event):
 
     # Text to send
     text_final = f"""
-        CCs: {ccf}
+        CC: {ccf}
         Brand: {brand}
         Type: {card_type}
         Level: {level}
