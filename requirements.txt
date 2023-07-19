@@ -1,0 +1,4 @@
+python-dotenv==1.0.0
+aiohttp==3.8.4
+huepy==1.2.1
+telethon==1.28.5
